@@ -1,9 +1,9 @@
 
 def decode(s):
-    for i in range(len(s)):
-        if s[i] == 'm':
-            s[i] == 'k'
-        
+    # s = s.replace('q', 'o').replace('y', 'a').replace('Y', 'A').replace('k', 'm').replace('e', 'g').replace('c', 'e').replace('C', 'E').replace('w', 'y')
+
+    s = s.replace('m', 'k').replace('q', 'o').replace('g', 'e')
+
     return s
 
 
@@ -19,7 +19,7 @@ def main():
 
     Ynyb
     """
-    decode(uzenet)
+    print(decode(uzenet))
 ##############################################################################
 
 if __name__ == "__main__":
