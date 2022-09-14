@@ -1,29 +1,27 @@
 
 
-import re
-
-
 def hangrend(word):
     melyMgh = "aáoóuú"
     magasMgh = "eéiíöőüű"
 
-    mely = 0
-    magas = 0
+    mely = False
+    magas = False
 
     for i in range(len(word)):
         if word[i] in melyMgh:
-            mely += 1
+            mely = True
         
         elif word[i] in magasMgh:
-            magas += 1
+            magas = True
 
-    if mely > 0 and magas == 0:
+        if mely and magas:
+            return "vegyes"
+
+    if mely and magas == False:
         return "mely"
-    elif magas > 0 and mely == 0:
+    elif mely == False and magas:
         return "magas"
-    elif mely > 0 and magas > 0:
-        return "vegyes"
-    elif mely == 0 and magas == 0:
+    elif mely == False and magas == False:
         return "semmilyen"
 
 
