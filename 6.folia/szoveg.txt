@@ -1,0 +1,5 @@
+elso sor
+masodik sor
+3. sor
+fourth line
+END
